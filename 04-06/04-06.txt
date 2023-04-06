@@ -1,0 +1,30 @@
+04-06
+
+jpg 이미지 효율이 좋음 원본을 제대로 표현하고 싶으면 사용 대신 용량 큼
+
+<form name="폼이름" method="전송방식" action="">
+
+MVC
+
+<div>나이1 : <input type ="number" name="age1" id ="age1" value ="20" /> </div>
+
+id는 무조건 중복 X 네임은 중복 가능
+
+콤보 하나만
+리스트박스 중복
+
+_top
+_parent
+_
+
+
+<html>
+<head>
+<title></title>
+</head>
+<body>
+
+
+</body>
+
+</html>

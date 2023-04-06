@@ -1,0 +1,12 @@
+if(no <1 || no >6) break;
+<!-- -->
+html>
+<head>
+<title></title>
+</head>
+<body>
+  <h2></h2>
+</body>
+</html>
+
+width 가로넓이  height 세로 넓이
