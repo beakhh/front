@@ -5,14 +5,23 @@
   background-color: rgb(182, 88, 104);
   text-align: center;
   font-size: 30px;
+  border-radius: 10px 20px 30px 40px;
 }
-#img1:hover, #img2:hover, #img3:hover {
+#img1:hover{
   top: 550px;
   width: 500px;
   height: 600px;
 }
-
-
+#img2:hover {
+  top: 550px;
+  width: 500px;
+  height: 600px;
+}
+#img3:hover {
+  top: 550px;
+  width: 500px;
+  height: 600px;
+}
 
 #img1 {left:500px; top: 550px;}
 #img2 {left:1050px; top:550px;}
@@ -20,13 +29,14 @@
 
 #img1:hover {
   left:500px;
-  background-image: url("../images/wis.jpg");
+  background-image: url("../images/wise.jpg");
 }
 #img2:hover {
   left:1050px;
-  background-image: url("../images/2.jpg");
+  background-image: url("../images/win.jpg");
 }
 #img3:hover {
   right: 0px;
-  background-image: url("../images/3.jpg");
+  background-image: url("../images/wjsxhd.jpg");
 }
+
