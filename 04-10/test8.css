@@ -1,0 +1,31 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0px;
+}
+
+ul, .container {
+  list-style: none;
+  padding: 0px;
+  border: 2px solid red;
+  display: grid;
+  height: 500px;
+/*
+  grid-template-columns: 100px  1fr 1fr;
+  grid-template-rows: 200px  1fr 1fr;
+  
+  gap: 20px 10px;
+*/
+
+  grid-template-columns: repeat(2,margin(300px,auto)); /* 2번 아이템의 최소크기를 100px로 한다는 뜻*/
+  grid-template-rows: repeat(3,1fr);
+  gap: 10px;
+}
+li{
+  background-color: rgb(116, 87, 143);
+}
+
+li:nth-child(2n){
+  background-color: rgb(216, 96, 231);
+}
