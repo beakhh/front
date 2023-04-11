@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    'use strict'
+
+    function chk(){
+      let mid = myform.mid.value.trim();
+      let pwd = document.getElementById("pwd").value.trim();
+      let minj1 = document.getElementById("minj1").value.trim();
+      let minj2 = document.getElementById("minj2").value.trim();
+
+      let gender ="";
+      if(document.getElementById("gender1").checked)gender ="남자";
+      if(document.getElementById("gender2").checked)gender ="여자";
+
+      let alcohol = '';
+      if(document.getElementById("alcohol1").checked) alcohol += document.getElementById("alcohol1").value + "/";
+      if(document.getElementById("alcohol2").checked) alcohol += document.getElementById("alcohol2").value + "/";
+      if(document.getElementById("alcohol3").checked) alcohol += document.getElementById("alcohol3").value + "/";
+      if(document.getElementById("alcohol4").checked) alcohol += document.getElementById("alcohol4").value + "/";
+      if(document.getElementById("alcohol5").checked) alcohol += document.getElementById("alcohol5").value + "/";
+
+      let job = document.getElementById("age").value;
+
+      if(mid == ""){
+        alert("아이디를 입력하세요");
+        myform.mid.focus();
+        return false;
+      }
+      else if(pwd == ""){
+        alert("비밀번호를 입력하세요")
+        myform.pwd.focus();
+        return false;
+      }
+      else if(minj1 == "") {
+        alert("주민등록증을 다시 입력하여 주세요.")
+        myform.minj1.focus();
+        return false;
+      }
+      else if(minj2 == "") {
+        alert("주민등록증을 다시 입력하여 주세요.")
+        myform.minj2.focus();
+        return false;
+      }
+
+
+      else if(gender == ""){
+        alert("성별을 입력하세요")
+        return false;
+      }
+      else if(age == "") {
+        alert("나이대를 선택하세요!");
+        return false;
+      }
+      else{
+        myform.mid.value = mid;
+        myform.pwd.value = pwd;
+        myform.minj1.value = minj1;
+        myform.minj2.value = minj2;
+        myform.submit();
+      }
+    }
+  </script>
+  <style>
+    #back{
+      background-color: #DEDEDE;
+      border-radius: 5px;
+    }
+    #f1{
+      border : 3px solid #212121;
+      
+    }
+    tr, td, th {
+      border : 1px solid #7a6d6d;
+    }
+    th{
+      background-color: #FFB2B2;
+    }
+  </style>
+</head>
+<body id="back">
+  <p><br/></p>
+  <div class="container">
+    <form name="myform" method="post" action="#">
+      <h2 class="text-center mb-4"> 회 원 가 입 </h2>
+      <table id="f1" class="table">
+        <tr>
+          <th><label for="mid">아이디</label> </th>
+          <td><input type="text" name="mid" id="mid" value="baik" class="form-control" autofocus required /></td>
+        </tr>
+        <tr>
+          <th><label for="pwd">비밀번호</label></th>
+          <td><input type="password" name="pwd" id="pwd" value="1234" class="form-control" required /></td>
+        </tr>
+
+        <tr>
+          <th><label for="minj">주민등록번호 </label></th>
+          <td>
+            <input type="number" name="minj" id="minj1" required /> - <input type="password" name="minj" id="minj2" required />
+          </td>
+        </tr>
+        <tr>
+          <th><label for="gender">성별</label></th>
+          <td>
+            <input type="radio" name="gender" id="gender1" value="남자" />남자 &nbsp;
+            <input type="radio" name="gender" id="gender2" value="여자" />여자
+          </td>
+        </tr>
+        <tr>
+          <th><label for="alcohol">선호하는 술</label></th>
+          <td>
+            <input type="checkbox" name="alcohol" id="alcohol1" value="브랜디" />브랜디 &nbsp;
+            <input type="checkbox" name="alcohol" id="alcohol2" value="위스크" />위스크 &nbsp;
+            <input type="checkbox" name="alcohol" id="alcohol3" value="레드와인" />레드와인 &nbsp;
+            <input type="checkbox" name="alcohol" id="alcohol4" value="화이트와인" />화이트와인 &nbsp;
+            <input type="checkbox" name="alcohol" id="alcohol5" value="삼페인" />삼페인
+          </td>
+        </tr>
+        <tr>
+          <th><label for="job">직업</label></th>
+          <td>
+            <select name="age" id="age">
+              <option value="">선택</option>
+              <option>20~25</option>
+              <option>26~30</option>
+              <option>31~35</option>
+              <option>36~40</option>
+              <option>40~</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" class="text-center">
+            <div class="row">
+              <div class="col"></div>
+              <div class="col"><input type="button" value="가입" onclick="chk()" class="btn btn-success btn-sm form-control mb-2"/></div>
+              <div class="col"><input type="reset" value="다시입력" class="btn btn-warning btn-sm form-control" /></div>
+              <div class="col"></div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</body>
+</html>
