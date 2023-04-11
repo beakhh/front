@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test10.html</title>
+  <script> 
+  'use strict';          // 자바처럼 타입을 쓰게 하려고 만든 선언문 그래서 타입을 선언 안 한su5가 에러남
+
+    let su2 = 200;                                    // var 사용하지 말고 이제부턴 let 을 사용해야함
+    console.log("1.su2 : + "+ (su2 += 100));
+    console.log("1.typeof(su2)" + typeof(su2));
+    {
+      console.log("2.su2 : + "+ (su2 += 100));
+    }
+    console.log("3.su2 : + "+ (su2 += 100));
+    
+    {
+      let su3 = 100;                 
+      console.log("2.su3 : + "+ (su3 += 100));
+    }
+    // console.log("3.su3 : + "+ (su3 += 100)); 
+
+    const su4 =100;                         // java 에 static final과 같은 거임 변하지 않는 수인 상수를 만드는 함수 const
+    // console.log("su4 : " + (su4+=100));
+
+    // su5 = 500;
+    // console.log("su5 : " + (su5+=100));
+
+  </script>
+</head>
+<body>
+  <h2>자바스크립트</h2>
+</body>
+</html>
