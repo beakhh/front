@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test9.html</title>
+  <script>
+    'use strict';
+
+    function backClear() {
+      // let cnn += 0;
+      let str = document.getElementById("str").value.trim();
+
+      if(str == "") {
+        alert("문자열을 입력하세요");
+      }
+      else {
+        str = str.substring(0, str.length-1);
+        document.getElementById("str").value = str;
+      }
+    }
+  </script>
+</head>
+<body>
+  <h2>
+    안녕하세요 감사합니다 토클
+  </h2>
+  <p></p>
+  <form name="myform">
+    <div>클릭:
+      <input type="button" value="클릭" onclick="backClear()"/>
+    </div>
+  </form>
+</body>
+</html>

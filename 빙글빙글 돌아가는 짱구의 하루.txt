@@ -1,0 +1,37 @@
+버튼 위로 올리기
+https://velog.io/@anrun/CSS-%EC%9C%84%EC%B9%98-%EC%A7%80%EC%A0%95%ED%95%98%EA%B8%B0position-float-inline-block-hyk5xn5nql
+
+fome 태그는 name으로 접근해야함
+아니면 아이디로 접근 해도 됨
+
+ ** placeholder ?? 
+
+ -- location.
+
+type submit은 form태그 없으면 못 사용함
+
+onclick="urlCheck()"에서 Enter을 치면 따로 Enter키를 받아야 함 온클릭은 엔터키 적용 X
+
+let keyCode = window.event.keyCode; 윈도우의 모든 키에 반응
+if(keyCode == 13) 여기서 13은 엔터를 의미 외ㅝ야 함
+
+0412 test4 를 입력하세요." !on! key /> 여기서  on은 이벤트를 뜻함
+
+type submit ??
+
+
+https://wooncloud.com/10 https://wooncloud.com/10https://wooncloud.com/10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
