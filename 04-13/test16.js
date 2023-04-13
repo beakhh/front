@@ -32,7 +32,7 @@ num = parseInt(Math.random()*10) + 1;   //아래랑 같은 결과
 num = Math.floor(Math.random()*10) + 1; //위애랑 이하동문
 
 num = Math.floor(Math.random()*45+1-1) + 1;  // 1~ 45까지의 난수
-// num = Math.floor(Math.random()*10+5-1) + 5;  // 5~10까지의 난수
+num = Math.floor(Math.random()*10-5+1) + 5;  // 5~10까지의 난수
 
 // 소수 반올림 : toFixed(), round()
 num = su3.toFixed(1);     //매개변수가 없으면 정수 반올림, 매개변수가 있으면 소수이하 반올림

@@ -1,0 +1,12 @@
+.flex-container{
+  display: flex-end; width: 100px;
+}
+.flex{
+  margin: 4px;
+  text-align: center;
+}.color-red{
+  background-color: darksalmon;
+}
+.color-blue{
+  background-color: dodgerblue;
+}
