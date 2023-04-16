@@ -1,8 +1,8 @@
 .flex-container{
   display: inline-flex;
-flex-flow: row wrap;
-height: 200px;
-width: 120px;
+  flex-flow: row wrap;
+  height: 200px;
+  width: 120px;
   padding: 10px;
   border: 1px solid lightgray;
   border-radius: 10px;

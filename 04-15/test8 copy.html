@@ -12,29 +12,46 @@
   <script>
     'use strict';
     let statusTime;
-
-    
-    // 시스템의 시간을 읽어온다.
+    // let number = [];
+    // number = ['img src = "../images/1.png";','img src = "../images/2.png";','img src = "../images/3.png";','img src = "../images/4.png";','img src = "../images/5.png";','img src = "../images/6.png";','img src = "../images/7.png";','img src = "../images/8.png";','src = "../images/9.png";']; 
     function clock() {
       let today = new Date();
       let hh = today.getHours();
+      console.log(typeof hh);
       let mm = today.getMinutes();
       let ss = today.getSeconds();
-      demo.innerHTML = hh + " : " + mm + " : " + ss;
-      console.log(typeof ss);
-      console.log(ss);
-      
-    }
 
+      // let h1 = Math.floor(hh/10);
+      // let h2 = hh%10;
+      // let m1 = Math.floor(mm/10);
+      // let m2 = mm%10;
+      // let s1 = Math.floor(ss/10);
+      // let s2 = ss%10;
+      // demo.innerHTML = number[h1]+number[h2] + " : " +number[m1]+number[m2] + " : " +number[h1]+number[h2]
+
+      document.getElementById("hh1").src = "../images/"+Math.floor(hh/10)+".png";
+      document.getElementById("hh2").src = "../images/"+hh%10+".png";
+      document.getElementById("mm1").src = "../images/"+Math.floor(mm/10)+".png";
+      document.getElementById("mm2").src = "../images/"+mm%10+".png";
+      document.getElementById("ss1").src = "../images/"+Math.floor(ss/10)+".png";
+      document.getElementById("ss2").src = "../images/"+ss%10+".png";
+    }
+    
     function clockStart() {
       clock();
       statusTime = setTimeout(clockStart, 1000)      // 시스템의 시간을 1초마다 1번씩 읽어온다.
     }
-
+    
     function clockStop() {
       clearTimeout(statusTime);
     }
+
   </script>
+  <style>
+    span{
+      font-size: 60px;
+    }
+  </style>
 </head>
 <body>
 <p><br/></p>
@@ -49,7 +66,15 @@
     <input type="button" value="정지" onclick="clockStop()" class="btn btn-success"/>
   </p>
   <hr/>
-  <div id="demo"></div>
+  <div id="demo">
+    <img id="hh1">
+    <img id="hh2">
+    <span>:</span>
+    <img id="mm1">
+    <img id="mm2">
+    <span>:</span>
+    <img id="ss1">
+    <img id="ss2">
 </div>
 <p><br/></p>
 </body>
