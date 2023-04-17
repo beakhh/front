@@ -22,16 +22,83 @@ type submit ??
 
 https://wooncloud.com/10 https://wooncloud.com/10https://wooncloud.com/10
 
+------------------------------------------------------
+04-13
+onchange="fCheck()" 선택하면서 값이 나옴
+
+test5_3 중요
+ fCheck2(this)
+fruit.selected 옵션값중 선택된 값
+
+document.getElementById("mid").value; 나의 창에서 가져오기
+
+opener.document.getElementById("mid").value;  부모창에서 가져오기
+
+oncontextmenu  마우스 우클릭
+onselectstart      드레그
+ondragstart        이미지 복사 드래그
+onkeydown        키보드 단추키 복사
+
+screenX 스크린 객체의 x좌표 y도 이하동문
+screenY
+
+e.type 현재 발생중인 상황
+
+isNaN 숫자가 아닌것????
+
+myform.num.select();
+myform.num.focus();  잘못 입력했을때 편하게 입력가능 test16 0414
+
+04-14
+동기식 즉각즉각 됨
+비동기식 어느순간 되어있음
+
+JSON.stringify
+
+// 3. object를 json포멧현식변환    클래스 만들기    --test1 
+const Member = {
+}
+
+    const Member = {
+      name : '홍길동', 
+      age : 25,
+      color : 'white',
+      birthday : new Date(),
+      size : null,
+      gender : true,
+      atom : () => {                                        여기에 있는 함수는 독립적
+        console.log("성명 : " , Member.name);      이라 콘솔값에 안 나옴???
+      },
+    }
+
+네임으로 접근하기위해 폼 테그 사용
+
+숨기기 display none /? hidden 철자 맞는지 모르겠음
+
+
+https://fontawesome.com/icons      이모티콘
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/fa3667321f.js" crossorigin="anonymous"></script>  
 
 
 
+------------------------------------------------------------------------
 
+04-17
 
+jQuery 사용법
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
+calcBtn.addEventListener('click', function () { });    //addEventListener이 calcBtn.을 감시하고 있다가, calcBtn.에서 'click'이 감지되면 function () { }을 실행 중요!
 
+JQuery 사용하는데 오류에 $ 가 뜨면 라이브러리 안 가져온거임 주의하셈
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
-
-
+$("#demo").css("color","red");
+$("#demo").css("fontSize","25pt");
+$("#demo").css({'color':'red','fontSize':'25pt'});
+jQ에서 css를 사용한 방법 한개와 여러개 쓸데가 조금 다름 주의
 
 
 
