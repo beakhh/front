@@ -100,5 +100,48 @@ $("#demo").css("fontSize","25pt");
 $("#demo").css({'color':'red','fontSize':'25pt'});
 jQ에서 css를 사용한 방법 한개와 여러개 쓸데가 조금 다름 주의
 
+04-18
+밑에거 체크한 값 출력하는 코드 언젠가 써먹으셈
+    $(function () {
+      $('.container input[name="choiceBtn1"]').click(function() {
+        let fruitArray = [];
+        // each();
+        $('.container input[class="fruit"]').each((index, item) => {
+          if($(item).is(':checked')) fruitArray.push($(item).val());
+        });
+        $('#demo').html(fruitArray.join('/'))
+      });
+    });
+구상하는 거에 필요할 ㄷ스
+ // 마우스가 버튼2안으로 들어가면 배경색은 노랑색으로, 글자색을 파랑색으로변경하고, 벗어나면 원래대로.
+      $('.btn2').on('mouseenter, mouseover',function() {
+        $(this).addClass('userClass');
+      })
+      .on('mouseleave',function() {
+        $(this).removeClass('userClass');
+      });
+
+      //그림의 속성(attribute) 변경하기(마우스 over시에 다른 그림으로, 마우스 out시는 원래 그림으로)
+      $('#img1 img').on('mouseenter, mouseover', function() {
+        $(this).attr({'src':'../images/2.jpg','width':'200px'})
+      })  
+      .on("mouseleave, mouseout", function() {
+        $(this).attr({'src':'../images/1.jpg','width':'150px'})
+      });
 
 
+
+
+    $(function(){
+      $('.menu li').mouseover(function() {
+        // $(this).next()
+        // $('ul',this).stop().slideDown(300);
+        $('ul',this).stop().fadeIn("slow");
+      })
+
+      $('.menu li').mouseout(function() {
+        $('ul',this).stop().fadeOut("slow");
+      })
+    });
+
+걍 부트 쓰셈
