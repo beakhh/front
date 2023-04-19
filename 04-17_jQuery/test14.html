@@ -14,7 +14,7 @@
     'use strict'
 
     $(function() {
-      /*
+      
       $('.container div').css('color','#ddd')         //container안의 div들을 글자 색 회색을 바꿈
         // .filter(function() {
         .filter((index,item)=> {             
@@ -24,11 +24,11 @@
         .filter(function(index,item) {
           return $(item).is('.kbs')                  // 25로 바뀐 것들 중 kbs가 있냐 없냐를 판단함             is는 있냐없냐를 물어봄
         }).css('color','red');                       // 있으면 글자색을 레드로 바꿈
-        */
+        
 
-      // not 메소드
-      $('.container div').css('color','#ddd')
-      .not('.test2').css('fontSize','6px');
+      // // not 메소드
+      // $('.container div').css('color','#ddd')
+      // .not('.test2').css('fontSize','6px');
 
 
     });

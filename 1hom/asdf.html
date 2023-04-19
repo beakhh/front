@@ -30,7 +30,7 @@
     // 비밀번호 확인
       if(!regex1.test(pwd)) document.getElementById("demo2").style.display="block";
       else document.getElementById("demo2").style.display="none";
-     }
+    }
   
   function nickCheck() {
     let nick = document.getElementById("nick").value.trim();
@@ -39,7 +39,7 @@
          // 닉네임 확인
     if(!regex2.test(nick)) document.getElementById("demo3").style.display="block";
       else document.getElementById("demo3").style.display="none";
-     }
+    }
   
   function nCheck() {
     let n = document.getElementById("n").value.trim();
@@ -48,7 +48,7 @@
     // 성명 확인
     if(!regex3.test(n)) document.getElementById("demo4").style.display="block";
       else document.getElementById("demo4").style.display="none";
-     }
+    }
   
   function emailCheck() {
     let email = document.getElementById("email").value.trim();
@@ -57,7 +57,7 @@
     // 이메일 확인
     if(!regex4.test(email)) document.getElementById("demo5").style.display="block";
       else document.getElementById("demo5").style.display="none";
-     }
+    }
   
   function pageCheck() {
     let page = document.getElementById("page").value.trim();
@@ -66,7 +66,7 @@
     // 홈페이지주소 확인
     if(!regex5.test(page)) document.getElementById("demo6").style.display="block";
       else document.getElementById("demo6").style.display="none";
-     }
+    }
   
   function phoneCheck() {
     let phone = document.getElementById("phone").value.trim();
@@ -75,7 +75,7 @@
     // 전화번호 확인
     if(!regex6.test(phone)) document.getElementById("demo7").style.display="block";
       else document.getElementById("demo7").style.display="none";
-     }
+    }
   
   function identityCheck() {
       let identity = document.getElementById("identity").value.trim();
@@ -84,8 +84,8 @@
     // 주민번호 확인
     if(!regex7.test(identity)) document.getElementById("demo8").style.display="block";
       else document.getElementById("demo8").style.display="none";
-     }
-   
+    }
+  
   
   function wholeReset() {
     location.reload();
@@ -98,70 +98,71 @@
     <form name="myform" method="post" action="<%=request.getContextPath()%>/hw">
       <h2>로 그 인</h2>
       <h6>괄호( ) 안의 형식을 맞춰주세요</h6>
-      <table class="table">
+      <div>
+        <div class="table ">
+          <div class="col text-left">아이디(영문대소문자, 숫자, _ 허용 / 4~20자) : </div>
+          <div class="col"><input type="text" name="mid" id="mid" onchang="midCheck()" class="form-control"/></div>
+        </div>
+        
+        <div class="table">
+          <div class="col" id="demo1" style="display:none; font-size:10pt; color:red">유효하지 않은 아이디입니다.</td>
+        </div>
         <tr>
-          <td>아이디(영문대소문자, 숫자, _ 허용 / 4~20자) : </td>
-          <td rowspan="2"><input type="text" name="mid" id="mid" onchange="midCheck()" class="form-control"/></td>
-        </tr>
-        <tr>
-          <td id="demo1" style="display:none; font-size:10pt; color:red">유효하지 않은 아이디입니다.</td>
-        </tr>
-        <tr>
-          <td>비밀번호(영문대소문자, 숫자, _, 특수글자 허용/ 4~20자) : </td>
-          <td rowspan="2"><input type="password" name="pwd" id="pwd" onchange="pwdCheck()" class="form-control"/></td>
+          <div class="row style='height=50px'">비밀번호(영문대소문자, 숫자, _, 특수글자 허용/ 4~20자) : </div>
+          <div class="col style='width= 100px'"><input type="password" name="pwd" id="pwd" onchang="pwdCheck()" class="form-control"/></div>
         </tr>
         <tr>
           <td id="demo2" style="display:none; font-size:10pt; color:red">유효하지 않은 비밀번호입니다.</td>
         </tr>
         <tr>
-          <td>닉네임(한글) : </td>
-          <td rowspan="2"><input type="text" name="nick" id="nick" onchange="nickCheck()" class="form-control"/></td>
+          <div class="row">닉네임(한글) : </div>
+          <div class="col style='width= 100px'"><input type="text" name="nick" id="nick" onchang="nickCheck()" class="form-control"/></td>
         </tr>
         <tr>
           <td id="demo3" style="display:none; font-size:10pt; color:red">유효하지 않은 닉네임입니다.</td>
         </tr>  
         <tr>
-          <td>성명(한글 or 영문) : </td>
-          <td rowspan="2"><input type="text" name="n" id="n" onchange="nCheck()" class="form-control"/></td>
+          <div class="row">성명(한글 or 영문) : </div>
+          <div class="col"><input type="text" name="n" id="n" onchang="nCheck()" class="form-control"/></div>
         </tr>
         <tr>
           <td id="demo4" style="display:none; font-size:10pt; color:red">유효하지 않은 성명입니다.</td>
         </tr>        
         <tr>
-          <td>이메일 : </td>
-          <td rowspan="2"><input type="text" name="email" id="email" onchange="emailCheck()" class="form-control"/></td>
+          <tdiv class="row"d>이메일 : </tdiv>
+          <div class="col"><input type="text" name="email" id="email" onchang="emailCheck()" class="form-control"/></div>
         </tr>
         <tr>
           <td id="demo5" style="display:none; font-size:10pt; color:red">유효하지 않은 이메일입니다.</td>
         </tr>        
         <tr>
-          <td>홈페이지 주소 : </td>
-          <td rowspan="2"><input type="text" name="page" id="page" onchange="pageCheck()" class="form-control"/></td>
+          <div class="row">홈페이지 주소 : </div>
+          <div class="col"><input type="text" name="page" id="page" onchang="pageCheck()" class="form-control"/></div>
         </tr>
         <tr>
           <td id="demo6" style="display:none; font-size:10pt; color:red">유효하지 않은 주소입니다.</td>
         </tr>        
         <tr>
-          <td>전화번호(010-xxxx-xxxx) : </td>
-          <td rowspan="2"><input type="text" name="phone" id="phone" onchange="phoneCheck()" class="form-control"/></td>
+          <div class="row">전화번호(010-xxxx-xxxx) : </div>
+          <div class="col"><input type="text" name="phone" id="phone" onchang="phoneCheck()" class="form-control"/></div>
         </tr>
         <tr>
           <td id="demo7" style="display:none; font-size:10pt; color:red">유효하지 않은 전화번호입니다.</td>
         </tr>        
         <tr>
-          <td>주민번호(6자리-7자리) : </td>
-          <td rowspan="2"><input type="text" name="identity" id="identity" onchange="identityCheck()" class="form-control"/></td>
+          <div class="row">주민번호(6자리-7자리) : </div>
+          <div class="col"><input type="text" name="identity" id="identity" onchang="identityCheck()" class="form-control"/></div>
         </tr>
         <tr>
           <td id="demo8" style="display:none; font-size:10pt; color:red">유효하지 않은 주민번호입니다.</td>
         </tr>        
         <tr>
-          <td colspan="3">
+          <div class="row">
             <input type="submit" value="로그인" class="btn btn-success mr-4"/>
             <input type="button" value="다시 입력" onclick="wholeReset()" class="btn btn-primary" />
-          </td>
+          </div>
         </tr>
-      </table>
+      </div>
     </form>
   </div>
 </body>
